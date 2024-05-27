@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const register = require('./auth/Register')
 const cors = require('cors')
 const SignIn = require('./auth/SignIn')
+const forgetPassRoute = require('./auth/ForgetPassword')
 const port = 3000; 
 const app = express();
 app.use(cors());
@@ -14,7 +15,7 @@ app.use(express.urlencoded({extended : true}));
 
 
 
-app.use( register, SignIn); 
+app.use( register, SignIn, forgetPassRoute); 
 app.listen(3000, (req, res) =>{
     console.log(`Server is running on port ${port}`); 
 })

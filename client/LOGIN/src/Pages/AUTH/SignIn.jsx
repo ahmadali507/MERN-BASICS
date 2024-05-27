@@ -78,7 +78,10 @@ const SignIn = () => {
                         </div>
                     </CardContent>
                     <CardFooter className="flex flex-col pb-16">
-                        <Button className="w-[20vw] justify-center mt-4"> SIGN In </Button>
+                        <Button className="w-[20vw] justify-center mt-4" type = "submit"> SIGN In </Button>
+                        <Button className = " mt-4 ">
+                         <Link to='/forget-password' className='text-blue-400 w-[17.6vw] justify-center text-1xl font-bold'>ForgetPassword</Link>
+                        </Button>
                     </CardFooter>
                    
 
